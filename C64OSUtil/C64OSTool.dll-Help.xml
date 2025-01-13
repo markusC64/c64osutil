@@ -1,0 +1,2038 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Enable-IECDevice</command:name>
+      <command:verb>Enable</command:verb>
+      <command:noun>IECDevice</command:noun>
+      <maml:description>
+        <maml:para>Enables the IEC device for the ultimate 64 resp. 1541 ultimate. Warning: This feature needs a suitable firmware on that device and is just for developers.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Enables the IEC device for the ultimate 64 resp. 1541 ultimate. Warning: This feature needs a suitable firmware on that device and is just for developers.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Enable-IECDevice</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>C64OS</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64OSCar</command:parameterValue>
+          <dev:type>
+            <maml:name>C64OSCar</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+        <maml:name>C64OS</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">C64OSCar</command:parameterValue>
+        <dev:type>
+          <maml:name>C64OSCar</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>C64OSTool.C64OSCar</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; get-C64OSRestore restore.car | Enable-IECDevice</dev:code>
+        <dev:remarks>
+          <maml:para>Warning: This feature needs a suitable firmware on that device and is just for developers.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Expand-C64CarFile</command:name>
+      <command:verb>Expand</command:verb>
+      <command:noun>C64CarFile</command:noun>
+      <maml:description>
+        <maml:para>Expands a general car file</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Expands a general car file</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Expand-C64CarFile</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Thepath to werite to. Works best when pointing to an empty directory.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>Car</maml:name>
+          <maml:description>
+            <maml:para>The inputz oobject</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+          <dev:type>
+            <maml:name>C64Car</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>FilenameConvention</maml:name>
+          <maml:description>
+            <maml:para>The Filename COnvention to use. Cfg. Expand-C64OSInstaller.</maml:para>
+          </maml:description>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" command:variableLength="false">ultimate64</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">raw</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">x00</command:parameterValue>
+          </command:parameterValueGroup>
+          <command:parameterValue required="true" variableLength="false">filenameConvntion</command:parameterValue>
+          <dev:type>
+            <maml:name>filenameConvntion</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+        <maml:name>Car</maml:name>
+        <maml:description>
+          <maml:para>The inputz oobject</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+        <dev:type>
+          <maml:name>C64Car</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Thepath to werite to. Works best when pointing to an empty directory.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>FilenameConvention</maml:name>
+        <maml:description>
+          <maml:para>The Filename COnvention to use. Cfg. Expand-C64OSInstaller.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">filenameConvntion</command:parameterValue>
+        <dev:type>
+          <maml:name>filenameConvntion</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>C64OSTool.C64Car</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:remarks>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Expand-C64OSInstaller</command:name>
+      <command:verb>Expand</command:verb>
+      <command:noun>C64OSInstaller</command:noun>
+      <maml:description>
+        <maml:para>Create an installer from a restore.car object and optionally installs C64 OS</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Create an installer from a restore.car object and optionally installs C64 OS</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Expand-C64OSInstaller</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The path where to save the output. Must be an empty directory.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>C64OS</maml:name>
+          <maml:description>
+            <maml:para>The restore.car object to use</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64OSCar</command:parameterValue>
+          <dev:type>
+            <maml:name>C64OSCar</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>ExtensionInRoot</maml:name>
+          <maml:description>
+            <maml:para>Enable or disable extensions in root, that is ".prg", ".seq".</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+          <dev:type>
+            <maml:name>Boolean</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>FilenameConvention</maml:name>
+          <maml:description>
+            <maml:para>Choose a filename convention: Raw             - '.prg' and '.seq" files, sd2iec compatible Ultimate64    -  prg' and '.seq" files, ultimate 64 compatible x00               - (default) creates x00 files</maml:para>
+          </maml:description>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" command:variableLength="false">ultimate64</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">raw</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">x00</command:parameterValue>
+          </command:parameterValueGroup>
+          <command:parameterValue required="true" variableLength="false">filenameConvntion</command:parameterValue>
+          <dev:type>
+            <maml:name>filenameConvntion</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Install</maml:name>
+          <maml:description>
+            <maml:para>Enables installation of C64 OS that is extracting the "OS" directory</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+          <dev:type>
+            <maml:name>Boolean</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>SkipRestoreCar</maml:name>
+          <maml:description>
+            <maml:para>Disables creating of restore.car</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+          <dev:type>
+            <maml:name>Boolean</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+        <maml:name>C64OS</maml:name>
+        <maml:description>
+          <maml:para>The restore.car object to use</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">C64OSCar</command:parameterValue>
+        <dev:type>
+          <maml:name>C64OSCar</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The path where to save the output. Must be an empty directory.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>ExtensionInRoot</maml:name>
+        <maml:description>
+          <maml:para>Enable or disable extensions in root, that is ".prg", ".seq".</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+        <dev:type>
+          <maml:name>Boolean</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>FilenameConvention</maml:name>
+        <maml:description>
+          <maml:para>Choose a filename convention: Raw             - '.prg' and '.seq" files, sd2iec compatible Ultimate64    -  prg' and '.seq" files, ultimate 64 compatible x00               - (default) creates x00 files</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">filenameConvntion</command:parameterValue>
+        <dev:type>
+          <maml:name>filenameConvntion</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Install</maml:name>
+        <maml:description>
+          <maml:para>Enables installation of C64 OS that is extracting the "OS" directory</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+        <dev:type>
+          <maml:name>Boolean</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>SkipRestoreCar</maml:name>
+        <maml:description>
+          <maml:para>Disables creating of restore.car</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+        <dev:type>
+          <maml:name>Boolean</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>C64OSTool.C64OSCar</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>----------------------- Typical workflow -----------------------</maml:title>
+        <dev:code>C:\PS&gt; get-C64OSRestore restore.car | Merge-C64OSUpdate .\updates\1.01.update.car, .\updates\1.02.update.car, .\updates\1.03.update.car | Expand-C64OSInstaller d:\ -Install $true</dev:code>
+        <dev:remarks>
+          <maml:para>On Mac or Linux, use '/' instead of '\' in paths.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Export-C64Carfile</command:name>
+      <command:verb>Export</command:verb>
+      <command:noun>C64Carfile</command:noun>
+      <maml:description>
+        <maml:para>Write a general car file object to a CAR file.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Write a general car file object to a CAR file.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Export-C64Carfile</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The file to write to</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>Car</maml:name>
+          <maml:description>
+            <maml:para>The input object</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+          <dev:type>
+            <maml:name>C64Car</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+        <maml:name>Car</maml:name>
+        <maml:description>
+          <maml:para>The input object</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+        <dev:type>
+          <maml:name>C64Car</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The file to write to</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>C64OSTool.C64Car</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-C64CarArchive backdrops1.car | Export-C64Carfile -Path d:\foo.car</dev:code>
+        <dev:remarks>
+          <maml:para>On Mac or Linux, use '/' instead of '\' in paths.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Export-C64OSCarfile</command:name>
+      <command:verb>Export</command:verb>
+      <command:noun>C64OSCarfile</command:noun>
+      <maml:description>
+        <maml:para>Exports an object of Type C64OSCar to a restore.car file</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Exports an object of Type C64OSCarto a restore.car file.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Export-C64OSCarfile</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The file to write to</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>C64OS</maml:name>
+          <maml:description>
+            <maml:para>Rhe Object to export</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64OSCar</command:parameterValue>
+          <dev:type>
+            <maml:name>C64OSCar</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+        <maml:name>C64OS</maml:name>
+        <maml:description>
+          <maml:para>Rhe Object to export</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">C64OSCar</command:parameterValue>
+        <dev:type>
+          <maml:name>C64OSCar</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The file to write to</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>C64OSTool.C64OSCar</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-- Update restore.car and write result as car file to a file. --</maml:title>
+        <dev:code>C:\PS&gt; get-C64OSRestore restore.car | Merge-C64OSUpdate .\updates\1.01.update.car, .\updates\1.02.update.car, .\updates\1.03.update.car | Export-C64OSCarfile -Path .\restore-1.03.car</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-C64CarArchive</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>C64CarArchive</command:noun>
+      <maml:description>
+        <maml:para>Reads a general CAR archive into an object</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Reads a general CAR archive into an object</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-C64CarArchive</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>the file to read from</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Get-C64CarArchive</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>C64OS</maml:name>
+          <maml:description>
+            <maml:para>In order to convert an C64 OS restore.car object (a special car file) use this parameter</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64OSCar</command:parameterValue>
+          <dev:type>
+            <maml:name>C64OSCar</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>the file to read from</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+        <maml:name>C64OS</maml:name>
+        <maml:description>
+          <maml:para>In order to convert an C64 OS restore.car object (a special car file) use this parameter</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">C64OSCar</command:parameterValue>
+        <dev:type>
+          <maml:name>C64OSCar</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>C64OSTool.C64OSCar</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>C64OSTool.C64Car</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>----------------------- Read a car file -----------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-C64CarArchive backdrops1.car</dev:code>
+        <dev:remarks>
+          <maml:para>On Mac or Linux, use '/' instead of '\' in paths.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-C64OSRestore</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>C64OSRestore</command:noun>
+      <maml:description>
+        <maml:para>Reads the file "restore.car" from a C64 OS installation into memory</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>This cmdlet raeds the file "restore.car" from a C64 OS installation into memory. Source can be a file or an object.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-C64OSRestore</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>In order to read the restore.car from a file, use this parammeter with the actual path.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Get-C64OSRestore</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Car</maml:name>
+          <maml:description>
+            <maml:para>In order to read the restore.car from an object of type C64Car, use this parameter.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+          <dev:type>
+            <maml:name>C64Car</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>In order to read the restore.car from a file, use this parammeter with the actual path.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Car</maml:name>
+        <maml:description>
+          <maml:para>In order to read the restore.car from an object of type C64Car, use this parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+        <dev:type>
+          <maml:name>C64Car</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>C64OSTool.C64OSCar</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>This object type represents a 'restore.car' as part of C64 OS.</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>----------------------- Read restore.car -----------------------</maml:title>
+        <dev:code>C:\PS&gt; Get-C64OSRestore .\restore.car</dev:code>
+        <dev:remarks>
+          <maml:para>On Mac or Linux, use '/' instead of '\' in paths.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>---------- Read restore.car and assign to a variable ----------</maml:title>
+        <dev:code>C:\PS&gt; G$c64os = Get-C64OSRestore .\restore.car</dev:code>
+        <dev:remarks>
+          <maml:para>On Mac or Linux, use '/' instead of '\' in paths.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Merge-C64OSUpdate</command:name>
+      <command:verb>Merge</command:verb>
+      <command:noun>C64OSUpdate</command:noun>
+      <maml:description>
+        <maml:para>Merge C64 OS Updates into restore.car</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>This Cmdlet merges C64 OS updates into an object representing C64 OS restore.car. It heurestically checks if the update can be applied. If that check fails, you can try to apply the update with the parameter '-force'</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Merge-C64OSUpdate</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Car</maml:name>
+          <maml:description>
+            <maml:para>The patch to be applied as an object</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64Car[]</command:parameterValue>
+          <dev:type>
+            <maml:name>C64Car[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>C64OS</maml:name>
+          <maml:description>
+            <maml:para>The object containg restore.car to patch</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64OSCar</command:parameterValue>
+          <dev:type>
+            <maml:name>C64OSCar</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Force</maml:name>
+          <maml:description>
+            <maml:para>Skip heuristic for checking if update can be applied</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Merge-C64OSUpdate</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The patch to be applied as a file resp. files.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+          <dev:type>
+            <maml:name>String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>C64OS</maml:name>
+          <maml:description>
+            <maml:para>The object containg restore.car to patch</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64OSCar</command:parameterValue>
+          <dev:type>
+            <maml:name>C64OSCar</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Force</maml:name>
+          <maml:description>
+            <maml:para>Skip heuristic for checking if update can be applied</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+        <maml:name>C64OS</maml:name>
+        <maml:description>
+          <maml:para>The object containg restore.car to patch</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">C64OSCar</command:parameterValue>
+        <dev:type>
+          <maml:name>C64OSCar</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Car</maml:name>
+        <maml:description>
+          <maml:para>The patch to be applied as an object</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">C64Car[]</command:parameterValue>
+        <dev:type>
+          <maml:name>C64Car[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Force</maml:name>
+        <maml:description>
+          <maml:para>Skip heuristic for checking if update can be applied</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The patch to be applied as a file resp. files.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+        <dev:type>
+          <maml:name>String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>C64OSTool.C64OSCar</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>An object representing restre.car of C64 OS</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>C64OSTool.C64OSCar</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>An object representing restre.car of C64 OS</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>------------------------ Merge Updates ------------------------</maml:title>
+        <dev:code>C:\PS&gt; get-C64OSRestore restore.car | Merge-C64OSUpdate .\updates\1.01.update.car, .\updates\1.02.update.car, .\updates\1.03.update.car</dev:code>
+        <dev:remarks>
+          <maml:para>On Mac or Linux, use '/' instead of '\' in paths.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>New-C64CarArchive</command:name>
+      <command:verb>New</command:verb>
+      <command:noun>C64CarArchive</command:noun>
+      <maml:description>
+        <maml:para>Creates a new general car object</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Creates a new general car object</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-C64CarArchive</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>CarType</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" command:variableLength="false">general</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">restore</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">install</command:parameterValue>
+          </command:parameterValueGroup>
+          <command:parameterValue required="true" variableLength="false">carType</command:parameterValue>
+          <dev:type>
+            <maml:name>carType</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Version</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+          <dev:type>
+            <maml:name>Byte</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Date</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">carDateTime</command:parameterValue>
+          <dev:type>
+            <maml:name>carDateTime</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>NotesASCII</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>CarType</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">carType</command:parameterValue>
+        <dev:type>
+          <maml:name>carType</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Version</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+        <dev:type>
+          <maml:name>Byte</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Date</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">carDateTime</command:parameterValue>
+        <dev:type>
+          <maml:name>carDateTime</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>NotesASCII</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>C64OSTool.C64Car</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------- Create a new car file --------------------</maml:title>
+        <dev:code>$car =  New-C64CarArchive -CarType install -Version 2 `
+   -Date (New-C64CarArchiveDate -Year 123 -Month 6 -Day 4 -Hour 8 -Minute 0) `
+   -NotesASCII "PWSH only: Upd C64OS 1.0-&gt;1.0P"
+Update-C64CarArchive -Car $car -Path / -Directory  -FileType ([byte][char]'D') -FilenameASCII "d 1.0P &lt;- 1.0"
+Update-C64CarArchive -Car $car -Path "/services/File Manager/init.o"  -File -FileType ([byte][char]'P') -FileContent (Get-Content -Raw -AsByteStream 1.0p\init.o.PRG )
+Update-C64CarArchive -Car $car -Path "/utilities/Installer"  -File -FileType ([byte][char]'P') -FileContent (Get-Content -Raw -AsByteStream 1.0p\Installer.PRG )
+Update-C64CarArchive -Car $car -Path "/settings/version.t"  -File -FileType ([byte][char]'S') -FileContent (Get-Content -Raw -AsByteStream 1.0p\version.t.SEQ )
+Export-C64Carfile -Car $car -Path 1.0p.update.car</dev:code>
+        <dev:remarks>
+          <maml:para>On Mac or Linux, use '/' instead of '\' in paths.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>New-C64CarArchiveDate</command:name>
+      <command:verb>New</command:verb>
+      <command:noun>C64CarArchiveDate</command:noun>
+      <maml:description>
+        <maml:para>Creates an object representing the creation date of a car file</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Creates an object representing the creation date of a car file</maml:para>
+      <maml:para>See New-C64CarArchive for an example.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-C64CarArchiveDate</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Year</maml:name>
+          <maml:description>
+            <maml:para>The actual year minus 1900</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+          <dev:type>
+            <maml:name>Byte</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Month</maml:name>
+          <maml:description>
+            <maml:para>The actual month</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+          <dev:type>
+            <maml:name>Byte</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Day</maml:name>
+          <maml:description>
+            <maml:para>The actual day</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+          <dev:type>
+            <maml:name>Byte</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Hour</maml:name>
+          <maml:description>
+            <maml:para>The actual Hour</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+          <dev:type>
+            <maml:name>Byte</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Minute</maml:name>
+          <maml:description>
+            <maml:para>The actual Minute</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+          <dev:type>
+            <maml:name>Byte</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>New-C64CarArchiveDate</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Now</maml:name>
+          <maml:description>
+            <maml:para>Create an object using the current timestamp</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Year</maml:name>
+        <maml:description>
+          <maml:para>The actual year minus 1900</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+        <dev:type>
+          <maml:name>Byte</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Month</maml:name>
+        <maml:description>
+          <maml:para>The actual month</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+        <dev:type>
+          <maml:name>Byte</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Day</maml:name>
+        <maml:description>
+          <maml:para>The actual day</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+        <dev:type>
+          <maml:name>Byte</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Hour</maml:name>
+        <maml:description>
+          <maml:para>The actual Hour</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+        <dev:type>
+          <maml:name>Byte</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Minute</maml:name>
+        <maml:description>
+          <maml:para>The actual Minute</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+        <dev:type>
+          <maml:name>Byte</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Now</maml:name>
+        <maml:description>
+          <maml:para>Create an object using the current timestamp</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>CommodoreDisk.Archive.car.carDateTime</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:remarks>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Update-C64CarArchive</command:name>
+      <command:verb>Update</command:verb>
+      <command:noun>C64CarArchive</command:noun>
+      <maml:description>
+        <maml:para>Warning: This Cmdlet is likely to change in future. It provides reading and writzing to car files</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>This cmdlet provides functions for reading and writign to car files</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Update-C64CarArchive</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Car</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+          <dev:type>
+            <maml:name>C64Car</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Get</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Update-C64CarArchive</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Car</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+          <dev:type>
+            <maml:name>C64Car</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>File</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>FileType</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+          <dev:type>
+            <maml:name>Byte</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Locked</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+          <dev:type>
+            <maml:name>Boolean</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>FilenameASCII</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>FileContent</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Byte[]</command:parameterValue>
+          <dev:type>
+            <maml:name>Byte[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Update-C64CarArchive</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Car</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+          <dev:type>
+            <maml:name>C64Car</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>FileType</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+          <dev:type>
+            <maml:name>Byte</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Locked</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+          <dev:type>
+            <maml:name>Boolean</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>FilenameASCII</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Directory</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Update-C64CarArchive</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Car</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+          <dev:type>
+            <maml:name>C64Car</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>GetContent</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Update-C64CarArchive</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Car</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+          <dev:type>
+            <maml:name>C64Car</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>UpdateMetadata</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>CarType</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">carType</command:parameterValue>
+          <dev:type>
+            <maml:name>carType</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Version</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+          <dev:type>
+            <maml:name>Byte</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Date</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">carDateTime</command:parameterValue>
+          <dev:type>
+            <maml:name>carDateTime</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>NotesASCII</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Update-C64CarArchive</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Car</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+          <dev:type>
+            <maml:name>C64Car</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Merge</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>CarUpdate</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64Car[]</command:parameterValue>
+          <dev:type>
+            <maml:name>C64Car[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Update-C64CarArchive</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Car</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+          <dev:type>
+            <maml:name>C64Car</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Merge</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>UpdatePath</maml:name>
+          <maml:description>
+            <maml:para>@{Text=}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+          <dev:type>
+            <maml:name>String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Car</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">C64Car</command:parameterValue>
+        <dev:type>
+          <maml:name>C64Car</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Get</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>File</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>FileType</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+        <dev:type>
+          <maml:name>Byte</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Locked</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Boolean</command:parameterValue>
+        <dev:type>
+          <maml:name>Boolean</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>FilenameASCII</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>FileContent</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Byte[]</command:parameterValue>
+        <dev:type>
+          <maml:name>Byte[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Directory</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>UpdateMetadata</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>CarType</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">carType</command:parameterValue>
+        <dev:type>
+          <maml:name>carType</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Version</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+        <dev:type>
+          <maml:name>Byte</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Date</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">carDateTime</command:parameterValue>
+        <dev:type>
+          <maml:name>carDateTime</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>NotesASCII</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>GetContent</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Merge</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>CarUpdate</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">C64Car[]</command:parameterValue>
+        <dev:type>
+          <maml:name>C64Car[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>UpdatePath</maml:name>
+        <maml:description>
+          <maml:para>@{Text=}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+        <dev:type>
+          <maml:name>String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:remarks>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+</helpItems>

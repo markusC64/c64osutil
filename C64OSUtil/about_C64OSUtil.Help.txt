@@ -1,0 +1,13 @@
+﻿TOPIC 
+	about_C64OSUtil
+	
+SHORT DESCRIPTION	
+	This module enables dealing with C64 OS car files
+	
+LONG DESCRIPTION
+	This module provides functions of dealing with C64 OS car files.
+	This includes updating a restore.car files with updates and generating an
+	installer from that.
+	
+EXAMPLES
+    get-C64OSRestore restore.car | Merge-C64OSUpdate .\updates\1.01.update.car, .\updates\1.02.update.car, .\updates\1.03.update.car | Expand-C64OSInstaller d:\ -Install $true
