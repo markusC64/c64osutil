@@ -77,7 +77,9 @@ CmdletsToExport = 'Expand-C64CarFile', 'Expand-C64OSInstaller',
                'Get-C64CarArchive', 'Get-C64OSRestore', 
                'Merge-C64OSUpdate', 'Update-C64CarArchive', 
                'New-C64CarArchive', 'New-C64CarArchiveDate', 
-               'Enable-IECDevice'
+               'Enable-IECDevice',
+               "Get-C64DHDPartitions", "Get-C64CMDPartition", 
+               "Set-C64CMDPartition"
 
 # Variables to export from this module
 VariablesToExport = '*'
