@@ -1,3 +1,5 @@
+This repository is deprecated and no longer maintained. The error is expected because this tool predates C64 OS 1.09. Please use floppydiskimagetool instead.
+
 # C64OSUtil #
 
 	This module provides functions of dealing with C64 OS car files.
