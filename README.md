@@ -1,4 +1,4 @@
-This repository is deprecated and no longer maintained. The error is expected because this tool predates C64 OS 1.09. Please use floppydiskimagetool instead.
+This repository is deprecated and no longer maintained. Please use floppydiskimagetool instead. It's compatible to latest C64 OS (at the time of this writing).
 
 # C64OSUtil #
 
