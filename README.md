@@ -1,4 +1,4 @@
-This repository is deprecated and no longer maintained. Please use floppydiskimagetool instead. It's compatible to latest C64 OS (at the time of this writing). Very same cmdlets are supported.
+This repository is deprecated and no longer maintained. Please use `floppydiskimagetool` instead. It's compatible with the latest C64 OS version available at the time of this writing. The same cmdlets are supported.
 
 # C64OSUtil #
 
